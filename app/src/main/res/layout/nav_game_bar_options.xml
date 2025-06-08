@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/jet">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorted By:"
+        android:textColor="@color/snow"
+        android:textSize="16sp"
+        android:fontFamily="@font/rubik_bold"
+        android:paddingBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/primarySortGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowOrderPreserved="false"
+        android:useDefaultMargins="true"
+        android:layout_marginBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/sortByRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textColor="@color/snow"
+            android:fontFamily="@font/rubik_bold"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="6dp" />
+
+        <RadioButton
+            android:id="@+id/sortByReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Release Date"
+            android:textColor="@color/snow"
+            android:fontFamily="@font/rubik_bold"
+            android:layout_marginBottom="6dp" />
+
+        <RadioButton
+            android:id="@+id/sortByName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="@color/snow"
+            android:fontFamily="@font/rubik_bold"
+            android:layout_marginEnd="40dp"/>
+
+        <RadioButton
+            android:id="@+id/sortByUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated"
+            android:textColor="@color/snow"
+            android:fontFamily="@font/rubik_bold"/>
+    </GridLayout>
+</LinearLayout>

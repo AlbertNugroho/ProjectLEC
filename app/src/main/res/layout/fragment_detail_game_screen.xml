@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/night"
+    tools:context=".DetailGameScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            android:id="@+id/videoplayer"
+            app:cardElevation="4dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="193dp">
+                <TextureView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/screenshotView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/thumbnailViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+            <TextView
+                android:layout_gravity="right"
+                android:id="@+id/ratingtxt"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="⭐5/5"
+                android:textColor="@color/snow" />
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/tagContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+            </com.google.android.flexbox.FlexboxLayout>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/gameName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/snow"
+                android:textSize="22sp"
+                android:text="GameName"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/developerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/snow"
+                android:textSize="16sp"
+                android:text="Developer"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/descriptionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="Description"
+                    android:textColor="@color/snow"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/toggleDescription"
+                    android:layout_width="110dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_tag_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="10dp"
+                    android:text="Show more"
+                    android:textColor="@color/snow"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_bold"
+                        android:text="Average Playtime : "
+                        android:textColor="@color/snow"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/averageplaytext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_bold"
+                        android:gravity="right"
+                        android:text="Loading..."
+                        android:textColor="@color/snow"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_bold"
+                        android:text="Total Downloads : "
+                        android:textColor="@color/snow"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/totaldownloads"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_bold"
+                        android:gravity="right"
+                        android:text="Loading..."
+                        android:textColor="@color/snow"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="Available on : "
+                    android:textColor="@color/snow"
+                    android:textSize="14sp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/platformContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:justifyContent="center"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="Reviews"
+                    android:textColor="@color/snow"
+                    android:textSize="18sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
